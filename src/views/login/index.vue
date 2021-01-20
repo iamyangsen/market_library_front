@@ -3,7 +3,7 @@
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
 
       <div class="title-container">
-        <h3 class="title">Login Form</h3>
+        <h3 class="title">产品库管理系统</h3>
       </div>
 
       <el-form-item prop="username">
@@ -41,11 +41,9 @@
         </span>
       </el-form-item>
 
-      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
+      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">登录</el-button>
 
       <div class="tips">
-        <span style="margin-right:20px;">username: admin</span>
-        <span> password: any</span>
       </div>
 
     </el-form>
@@ -180,14 +178,16 @@ $light_gray:#eee;
 .login-container {
   min-height: 100%;
   width: 100%;
-  background-color: $bg;
+  background: url('../../icons/svg/login/login-bg.png') no-repeat;
+  background-size: 100% 100%;
   overflow: hidden;
 
   .login-form {
-    position: relative;
+    position: absolute;
     width: 520px;
     max-width: 100%;
-    padding: 160px 35px 0;
+    right: 10%;
+    top:30%;
     margin: 0 auto;
     overflow: hidden;
   }
